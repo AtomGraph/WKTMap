@@ -6,7 +6,10 @@
         "target": "es6",
         "lib": [ "dom", "es6", "es2017" ],
         "declaration": true,
-        "baseUrl": "."
+        "baseUrl": ".",
+        "paths": {
+          "ol/*": ["node_modules/ol/*"]
+        }
     },
     "include": [
         "./src/**/*",
