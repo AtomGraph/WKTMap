@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "Example using OpenLayers with Parcel",
   "dependencies": {
-    "@types/ol": "6.5.3",
-    "ol": "6.5.3"
+    "ol": "6.6.1"
   },
   "scripts": {
     "build": "tsc"
