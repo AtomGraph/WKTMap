@@ -8,21 +8,16 @@ export class WKTMap
 {
 
     private format: WKT;
-    private raster: TileLayer;
     private target: HTMLElement;
     private view: View;
+    private raster: TileLayer;
 
-    constructor(target: HTMLElement, view: View)
-    {
-        this(new OSM(), target, view);
-    }
-
-    constructor(raster: TileLayer, target: HTMLElement, view: View)
+    constructor(target: HTMLElement, view: View, raster?: TileLayer)
     {
         this.format = new WKT();
-        this.raster = raster;
         this.target = target;
         this.view = view;
+        this.raster = raster !== undefined ? raster : new OSM();
     }
 
     public render(wkt: string)
@@ -50,11 +45,6 @@ export class WKTMap
         return this.format;
     }
 
-    public getRaster(): TileLayer
-    {
-        return this.raster;
-    }
-
     public getTarget(): HTMLElement
     {
         return this.target;
@@ -63,6 +53,11 @@ export class WKTMap
     public getView(): View
     {
         return this.view;
+    }
+
+    public getRaster(): TileLayer | undefined
+    {
+        return this.raster;
     }
 
 }
