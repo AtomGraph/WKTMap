@@ -55,7 +55,7 @@ export class WKTMap
         return this.view;
     }
 
-    public getRaster(): TileLayer | undefined
+    public getRaster(): TileLayer
     {
         return this.raster;
     }
