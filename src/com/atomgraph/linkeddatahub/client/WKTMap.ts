@@ -1,8 +1,8 @@
-import Map from 'ol/Map';
-import View from 'ol/View';
-import WKT from 'ol/format/WKT';
-import {OSM, Vector as VectorSource} from 'ol/source';
-import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer';
+import { Map } from 'ol/Map';
+import { View } from 'ol/View';
+import { WKT } from 'ol/format/WKT';
+import { OSM, Vector as VectorSource } from 'ol/source';
+import { Tile as TileLayer, Vector as VectorLayer } from 'ol/layer';
 
 export class WKTMap
 {
