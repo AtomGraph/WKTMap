@@ -1,8 +1,8 @@
-import { TileLayer } from '@ol/layer/Tile';
+import { Tile } from 'ol/layer';
 
 export class WKTMap
 {
 
-    private raster: TileLayer;
+    private raster: Tile;
 
 }
