@@ -34,7 +34,7 @@ export class WKTMap
         });
 
         var map = new Map({
-          layers: [raster, vector],
+          layers: [getRaster(), vector],
           target: getTarget(),
           view: getView()
         });
@@ -42,17 +42,22 @@ export class WKTMap
 
     public getFormat(): WKT
     {
-        return format;
+        return this.format;
+    }
+
+    public getRaster(): TileLayer
+    {
+        return this.raster;
     }
 
     public getTarget(): HTMLElement
     {
-        return target;
+        return this.target;
     }
 
     public getView(): View
     {
-        return view;
+        return this.view;
     }
 
 }
