@@ -17,7 +17,7 @@ export class WKTMap
         this.format = new WKT();
         this.target = target;
         this.view = view;
-        this.raster = raster !== undefined ? raster : new OSM();
+        this.raster = raster !== undefined ? raster : new TileLayer({ source: new OSM() });
     }
 
     public render(wkt: string)
