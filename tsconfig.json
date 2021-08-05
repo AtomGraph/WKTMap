@@ -6,7 +6,8 @@
         "target": "es6",
         "lib": [ "dom", "es6", "es2017" ],
         "declaration": true,
-        "baseUrl": "."
+        "baseUrl": ".",
+        "types": []
     },
     "include": [
         "./src/**/*",
