@@ -10,7 +10,7 @@ export class WKTMap
     private format: WKT;
     private raster: TileLayer;
     private target: HTMLElement;
-    privaet view: View;
+    private view: View;
 
     constructor(raster: TileLayer, target: HTMLElement, view: View)
     {
