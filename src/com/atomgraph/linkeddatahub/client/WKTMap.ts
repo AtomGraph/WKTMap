@@ -10,9 +10,9 @@ export class WKTMap
     private format: WKT;
     private target: HTMLElement;
     private view: View;
-    private raster: TileLayer;
+    private raster: TileLayer<OSM>;
 
-    constructor(target: HTMLElement, view: View, raster?: TileLayer)
+	    constructor(target: HTMLElement, view: View, raster?: TileLayer<OSM>)
     {
         this.format = new WKT();
         this.target = target;
@@ -55,7 +55,7 @@ export class WKTMap
         return this.view;
     }
 
-    public getRaster(): TileLayer
+    public getRaster(): TileLayer<OSM>
     {
         return this.raster;
     }

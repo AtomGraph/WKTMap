@@ -1,5 +1,5 @@
 const path = require('path');
-const { TsConfigPathsPlugin } = require('awesome-typescript-loader');
+//const { TsConfigPathsPlugin } = require('awesome-typescript-loader');
 
 module.exports = {
   entry: './src/com/atomgraph/linkeddatahub/client/WKTMap.ts',
@@ -9,16 +9,16 @@ module.exports = {
     rules: [
       {
         test: /\.ts?$/,
-        loader: 'awesome-typescript-loader',
+        loader: 'ts-loader',
         exclude: /node_modules/
       }
     ]
   },
   resolve: {
-    extensions: [ '.ts' ],
-    plugins: [
-      new TsConfigPathsPlugin()
-    ]
+    extensions: [ '.ts' ]//,
+    //plugins: [
+    //  new TsConfigPathsPlugin()
+    //]
   },
   output: {
     library: ["WKTMap"],

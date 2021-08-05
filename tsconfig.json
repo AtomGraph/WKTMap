@@ -2,21 +2,22 @@
     "compilerOptions": {
         "strict": true,
         "outDir": "./build",
+	"jsx": "preserve",
+	"esModuleInterop": true,
         "sourceMap": true,
+	"allowJs": true,
         "target": "es6",
-        "lib": [ "dom", "es6", "es2017" ],
+        "lib": [ "dom", "es6" ],
         "declaration": true,
         "baseUrl": ".",
-        "paths": {
-          "ol/*": ["node_modules/ol/*"]
-        }
+	"moduleResolution": "node"
     },
     "include": [
         "./src/**/*",
         "./test/**/*"
     ],
     "exclude": [
-        "node_modules",
+	"node_modules",
         "build",
         "dist"
     ]
