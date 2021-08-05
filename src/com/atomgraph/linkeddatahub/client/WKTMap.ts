@@ -12,6 +12,11 @@ export class WKTMap
     private target: HTMLElement;
     private view: View;
 
+    constructor(target: HTMLElement, view: View)
+    {
+        this(new OSM(), target, view);
+    }
+
     constructor(raster: TileLayer, target: HTMLElement, view: View)
     {
         this.format = new WKT();
