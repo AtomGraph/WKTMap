@@ -1,4 +1,4 @@
-import { TileLayer } from 'ol/TileLayer';
+import { TileLayer } from '@ol/TileLayer';
 
 export class WKTMap
 {
