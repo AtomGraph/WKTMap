@@ -2,7 +2,6 @@
     "compilerOptions": {
         "strict": true,
         "outDir": "./build",
-	"jsx": "preserve",
 	"esModuleInterop": true,
         "sourceMap": true,
 	"allowJs": true,
@@ -10,7 +9,8 @@
         "lib": [ "dom", "es6" ],
         "declaration": true,
         "baseUrl": ".",
-	"moduleResolution": "node"
+	"moduleResolution": "node",
+	"skipLibCheck": true
     },
     "include": [
         "./src/**/*",
