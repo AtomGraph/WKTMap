@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "outDir": "./build",
+        "sourceMap": true,
+        "target": "es6",
+        "lib": [ "dom", "es6", "es2017" ],
+        "declaration": true,
+        "baseUrl": ".",
+        "types": [
+          "google.maps"
+        ]
+    },
+    "include": [
+        "./src/**/*",
+        "./test/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "build",
+        "dist"
+    ]
+}
