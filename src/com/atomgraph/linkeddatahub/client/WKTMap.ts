@@ -22,7 +22,7 @@ export class WKTMap
 
     public render(wkt: string)
     {
-        var feature = getFormat().readFeature(wkt, {
+        var feature = this.getFormat().readFeature(wkt, {
           dataProjection: 'EPSG:4326',
           featureProjection: 'EPSG:3857',
         });
@@ -34,9 +34,9 @@ export class WKTMap
         });
 
         var map = new Map({
-          layers: [getRaster(), vector],
-          target: getTarget(),
-          view: getView()
+          layers: [this.getRaster(), vector],
+          target: this.getTarget(),
+          view: this.getView()
         });
     }
 
