@@ -1,6 +1,7 @@
 import Map from 'ol/Map';
 import View from 'ol/View';
 import WKT from 'ol/format/WKT';
+import Feature from 'ol/Feature';
 import { OSM, Vector as VectorSource } from 'ol/source';
 import { Tile as TileLayer, Vector as VectorLayer } from 'ol/layer';
 
@@ -11,6 +12,7 @@ export class WKTMap
     private target: HTMLElement;
     private view: View;
     private raster: TileLayer<OSM>;
+    private feature: Feature;
 
     constructor(target: HTMLElement, view: View, raster?: TileLayer<OSM>)
     {
@@ -22,14 +24,14 @@ export class WKTMap
 
     public render(wkt: string)
     {
-        var feature = this.getFormat().readFeature(wkt, {
+        this.feature = this.getFormat().readFeature(wkt, {
           dataProjection: 'EPSG:4326',
           featureProjection: 'EPSG:3857',
         });
 
         var vector = new VectorLayer({
           source: new VectorSource({
-            features: [feature],
+            features: [this.feature],
           }),
         });
 
@@ -58,6 +60,11 @@ export class WKTMap
     public getRaster(): TileLayer<OSM>
     {
         return this.raster;
+    }
+
+    public getFeature(): Feature
+    {
+        return this.feature;
     }
 
 }
