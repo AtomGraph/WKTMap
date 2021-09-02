@@ -64,7 +64,7 @@ export class WKTMap
         return this.raster;
     }
 
-    public getFeature(): Feature<Geometry>
+    public getFeature(): Feature<Geometry> | null
     {
         return this.feature;
     }
