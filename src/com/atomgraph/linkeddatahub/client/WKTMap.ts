@@ -1,7 +1,7 @@
 import Map from 'ol/Map';
 import View from 'ol/View';
 import WKT from 'ol/format/WKT';
-import Feature from 'ol/Feature';
+import Feature<Geometry> from 'ol/Feature';
 import { OSM, Vector as VectorSource } from 'ol/source';
 import { Tile as TileLayer, Vector as VectorLayer } from 'ol/layer';
 
@@ -62,7 +62,7 @@ export class WKTMap
         return this.raster;
     }
 
-    public getFeature(): Feature
+    public getFeature(): Feature<Geometry>
     {
         return this.feature;
     }
