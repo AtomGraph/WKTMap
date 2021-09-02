@@ -13,7 +13,7 @@ export class WKTMap
     private target: HTMLElement;
     private view: View;
     private raster: TileLayer<OSM>;
-    private feature: Feature<Geometry>;
+    private feature: Feature<Geometry> | null;
 
     constructor(target: HTMLElement, view: View, raster?: TileLayer<OSM>)
     {
